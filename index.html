@@ -8,36 +8,60 @@
 
             body {
                 margin: 40px;
-                background-color: #fff;
-                color: #444;
-                font: 2em Sansita, sans-serif;
+                color: rgb(131, 131, 131);
+                font-family: Sansita, sans-serif;
             }
 
-            .wrapper {
+            .grid {
                 display: grid;
                 grid-template-columns: 25% 25% 25% 25%;
                 grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+                height: 100vh;
             }
 
-            .card {
-                background-color: rgb(233,78,119);;
+            img {
+                border-radius: 50px;
+                display: block;
+                border: 0;
+                width: 50px;
+                height: 15%;
+            }
+
+            .grid .card {
+                box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
                 margin: 10px;
-                padding: 10px 20px;
+                padding: 30px 40px;
                 text-align: center;
+                background-color: #f1f1f1;
+                flex: flex;
             }
 
             .card.card1 {
+                color: rgb(207,207,207);
+                background-color: rgb(72,85,106);
                 grid-column-start: 1;
                 grid-column-end: 3;
                 grid-row-start: 1;
                 grid-row-end: 2;
             }
 
+            .card.card2 h2{
+                color: rgb(0, 0, 0);
+            }
+
             .card.card3{
                 grid-column: 4 ;
                 grid-row: row1-start / row2-end;
-                height: 800px;
+                
+            }
+
+            .card.card3 h2{
+                color: rgb(72,85,115);
+            }
+
+            .card.card4 h2{
+                color: rgb(72,85,115);
             }
 
             .card.card5{
@@ -46,24 +70,134 @@
                 grid-row-start: 2;
                 grid-row-end: 2;
             }   
+
+            .card.card5 h2{
+                color: rgb(72,85,115);
+            }
+
+            .card .card-content-avatar {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                gap: 12px;
+            }
+
+            .card .card-content-avatar .details {
+                display: flex;
+                flex-direction: column;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            .card .card-content {
+                text-align: left;
+            }
+
+            .card .card-content p {
+                letter-spacing: 2px;
+            }
+           
         </style>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="card card1">One
-
+        <div class="grid">
+            <div class="card card1">
+                <div class="card-content-avatar">
+                    <img src="img_avatar.png" alt="Avatar">
+                    <div class="details">
+                        <span class="user-detail__username">
+                            Daniel Clifford
+                        </span>
+                        <span class="user-detail__status">Verified Graduate</span>
+                      </div>
+                </div>
+                <div class="card-content">
+                    <h2>Bacon ipsum dolor amet chislic alcatra ham hock, pork corned beef doner biltong bacon andouille ham pancetta kielbasa. 
+                        Buffalo burgdoggen drumstick, meatball flank ball tip tri-tip strip steak chislic salami pig capicola pork loin tongue.
+                    </h2>
+                    <h4>Swine bresaola jowl, shankle buffalo strip steak beef ribs pancetta capicola biltong andouille tongue pork belly pork loin. 
+                        Ham pork belly pork chop, bresaola strip steak chicken ball tip picanha shoulder. 
+                        Pork chop picanha meatloaf, prosciutto kevin jowl corned beef kielbasa sausage short ribs tongue pastrami short loin beef. 
+                        Pastrami capicola bacon, alcatra shankle leberkas ham tail beef ribs swine chislic beef jerky tenderloin ribeye.
+                    </h4>
+                </div>
             </div>
-            <div class="card card2">Two
-
+            <div class="card card2">
+                <div class="card-content-avatar">
+                    <img src="img_avatar.png" alt="Avatar">
+                    <div class="details">
+                        <span class="user-detail__username">
+                            Jonathan Walters
+                        </span>
+                        <span class="user-detail__role">Adminstrator</span>
+                      </div>
+                </div>
+                <div class="card-content">
+                    <h2>Bacon ipsum dolor amet chislic alcatra ham hock, pork corned beef doner biltong</h2>
+                    <p>Swine bresaola jowl, shankle buffalo strip steak beef ribs pancetta capicola biltong andouille tongue pork belly pork loin.</p>
+                </div>
             </div>
-            <div class="card card3">Three
-
+            <div class="card card3">
+                <div class="card-content-avatar">
+                    <img src="img_avatar2.png" alt="Avatar">
+                    <div class="details">
+                        <span class="user-detail__username">
+                            Kira Whittle
+                        </span>
+                        <span class="user-detail__role">Adminstrator</span>
+                      </div>
+                </div>
+                <div class="card-content">
+                    <h2>Bacon ipsum dolor amet chislic alcatra ham</h2>
+                    <p>Chicken landjaeger drumstick pastrami chislic leberkas pork chop pork hamburger jerky venison andouille buffalo rump. 
+                        Picanha rump corned beef swine biltong chicken. Frankfurter prosciutto leberkas sausage pastrami meatloaf bresaola. 
+                        Burgdoggen ground round cow ball tip, tenderloin pork chop tri-tip doner pork belly pancetta meatball landjaeger ham meatloaf. 
+                        Corned beef jowl jerky ham hock short ribs leberkas.
+                        Tenderloin sausage tongue pastrami, meatloaf hamburger pork belly alcatra pork chop tri-tip ribeye jerky. 
+                        Drumstick turducken hamburger landjaeger leberkas boudin. Bacon buffalo boudin capicola bresaola pork loin landjaeger tongue short ribs jowl pastrami. 
+                        Brisket spare ribs biltong shank, rump cupim tail frankfurter corned beef tri-tip short ribs leberkas jowl kielbasa andouille. 
+                        Beef shoulder bacon picanha biltong.
+                        Chicken landjaeger drumstick pastrami chislic leberkas pork chop pork hamburger jerky venison andouille buffalo rump. 
+                        Picanha rump corned beef swine biltong chicken. Frankfurter prosciutto leberkas sausage pastrami meatloaf bresaola. 
+                        Burgdoggen ground round cow ball tip, tenderloin pork chop tri-tip doner pork belly pancetta meatball landjaeger ham meatloaf. 
+                        Corned beef jowl jerky ham hock short ribs leberkas.
+                    </p>
+                </div>
             </div>
-            <div class="card card4">Four
-
+            <div class="card card4">
+                <div class="card-content-avatar">
+                    <img src="img_avatar2.png" alt="Avatar">
+                    <div class="details">
+                        <span class="user-detail__username">
+                            Jeanette Harmon
+                        </span>
+                        <span class="user-detail__role">Adminstrator</span>
+                      </div>
+                </div>
+                <div class="card-content">
+                    <h2>Bacon ipsum dolor amet chislic alcatra ham hock, pork corned beef doner biltong</h2>
+                    <p>Swine bresaola jowl, shankle buffalo strip steak beef ribs pancetta capicola biltong andouille tongue pork belly pork loin.</p>
+                </div>
             </div>
-            <div class="card card5">Five
-
+            <div class="card card5">
+                <div class="card-content-avatar">
+                    <img src="img_avatar.png" alt="Avatar">
+                    <div class="details">
+                        <span class="user-detail__username">
+                            Patrick Abrams
+                        </span>
+                        <span class="user-detail__role">Adminstrator</span>
+                      </div>
+                </div>
+                <div class="card-content">
+                    <h2>Bacon ipsum dolor amet chislic alcatra ham hock, pork corned beef doner biltong bacon andouille ham pancetta kielbasa. 
+                    </h2>
+                    <p>Swine bresaola jowl, shankle buffalo strip steak beef ribs pancetta capicola biltong andouille tongue pork belly pork loin. 
+                        Ham pork belly pork chop, bresaola strip steak chicken ball tip picanha shoulder. 
+                        Pork chop picanha meatloaf, prosciutto kevin jowl corned beef kielbasa sausage short ribs tongue pastrami short loin beef. 
+                        Pastrami capicola bacon, alcatra shankle leberkas ham tail beef ribs swine chislic beef jerky tenderloin ribeye.
+                    </p>
+                </div>
             </div>
         </div>
 
